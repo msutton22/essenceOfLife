@@ -9,7 +9,9 @@
 import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelReview: UILabel!
+    @IBOutlet weak var imageReview: UIImageView!
+    @IBOutlet weak var stars: StarControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
