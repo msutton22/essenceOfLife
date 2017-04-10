@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    @IBAction func onTappedImage(_ sender: UITapGestureRecognizer) {
+    }
 
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
     }
