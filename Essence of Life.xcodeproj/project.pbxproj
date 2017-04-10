@@ -16,6 +16,7 @@
 		3FE420D41E9686EB00686AEC /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */; };
 		3FF801721E97D97200EFF1F9 /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF801711E97D97200EFF1F9 /* PasswordTableViewCell.swift */; };
 		3FF801741E97DF8F00EFF1F9 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF801731E97DF8F00EFF1F9 /* MedicalViewController.swift */; };
+		3FF801761E9BD29800EFF1F9 /* PasswordClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF801751E9BD29800EFF1F9 /* PasswordClass.swift */; };
 		3FFB19871E82BD3800401134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB19861E82BD3800401134 /* AppDelegate.swift */; };
 		3FFB19891E82BD3800401134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB19881E82BD3800401134 /* ViewController.swift */; };
 		3FFB198C1E82BD3800401134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB198A1E82BD3800401134 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3FF801711E97D97200EFF1F9 /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
 		3FF801731E97DF8F00EFF1F9 /* MedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
+		3FF801751E9BD29800EFF1F9 /* PasswordClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordClass.swift; path = ../PasswordClass.swift; sourceTree = "<group>"; };
 		3FFB19831E82BD3800401134 /* Essence of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Essence of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFB19861E82BD3800401134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FFB19881E82BD3800401134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3FFB19861E82BD3800401134 /* AppDelegate.swift */,
 				3FE420D11E9686D100686AEC /* MainPasswordViewController.swift */,
 				3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */,
+				3FF801751E9BD29800EFF1F9 /* PasswordClass.swift */,
 				3FFB198A1E82BD3800401134 /* Main.storyboard */,
 				3F98915E1E97296100D4892E /* Review1TableViewController.swift */,
 				3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */,
@@ -291,6 +294,7 @@
 				3FE420D21E9686D100686AEC /* MainPasswordViewController.swift in Sources */,
 				3FFB19891E82BD3800401134 /* ViewController.swift in Sources */,
 				3FF801741E97DF8F00EFF1F9 /* MedicalViewController.swift in Sources */,
+				3FF801761E9BD29800EFF1F9 /* PasswordClass.swift in Sources */,
 				3FE420D41E9686EB00686AEC /* NewPasswordViewController.swift in Sources */,
 				3F98915B1E97280300D4892E /* ReviewTableViewCell.swift in Sources */,
 				3FFB19871E82BD3800401134 /* AppDelegate.swift in Sources */,
