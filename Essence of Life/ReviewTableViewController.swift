@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import os.log
 
 class ReviewTableViewController: UITableViewController {
-
+ var reviews = [Review]()
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var stars: StarControl!
     @IBOutlet weak var titleLabel: UILabel!

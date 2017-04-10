@@ -6,4 +6,11 @@
 //  Copyright © 2017 Les Lentilz. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import os.log
+
+class Review : NSObject, NSCoding {
+    var photo: UIImage?
+    var rating: Int = 0
+    
+}
