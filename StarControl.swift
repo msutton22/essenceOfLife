@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class StarRate: UIStackView {
+@IBDesignable class StarControl: UIStackView {
     
     private var starButtons = [UIButton]()
     var rating = 0 {

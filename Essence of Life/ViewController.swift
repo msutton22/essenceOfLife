@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var stars: StarControl!
+    
     @IBOutlet weak var commentBox: UITextView!
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var imageView: UIImageView!
