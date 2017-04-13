@@ -76,7 +76,7 @@ import UIKit
             button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             button.accessibilityLabel = "Set \(index + 1) star rating"
             
-            button.addTarget(self, action: #selector(StarRate.ratingButtonTapped(button:)), for: .touchUpInside)
+            button.addTarget(self, action: #selector(StarControl.ratingButtonTapped(button:)), for: .touchUpInside)
             
             addArrangedSubview(button)
             
