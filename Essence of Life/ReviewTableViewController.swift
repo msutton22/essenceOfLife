@@ -13,7 +13,7 @@ class ReviewTableViewController: UITableViewController {
  var reviews = [Review]()
     
     @IBOutlet weak var imageView: UIImageView!
-  //  @IBOutlet weak var stars: StarControl!
+  
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var addItem: UIBarButtonItem!
     override func viewDidLoad() {

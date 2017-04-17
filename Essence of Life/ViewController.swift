@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
+import os.log
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var commentBox: UITextView!
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
