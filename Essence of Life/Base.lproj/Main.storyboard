@@ -376,7 +376,7 @@
         <!--New Review-->
         <scene sceneID="jJS-eI-FXH">
             <objects>
-                <viewController id="5J3-yt-BpR" customClass="ViewController" customModule="Essence_of_Life" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5J3-yt-BpR" customClass="FunViewController" customModule="Essence_of_Life" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qKR-O6-l0y"/>
                         <viewControllerLayoutGuide type="bottom" id="cKf-ag-148"/>
@@ -432,8 +432,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="mgt-zM-kga" id="L7U-IE-84a"/>
                         <outlet property="commentBox" destination="CaB-wb-zG1" id="Kaz-ZV-MOM"/>
+                        <outlet property="imageReview" destination="hWt-FQ-oR8" id="0Td-Mg-WX1"/>
                         <outlet property="imageView" destination="hWt-FQ-oR8" id="NS0-2E-WfW"/>
+                        <outlet property="reviewText" destination="CaB-wb-zG1" id="Oug-MP-zDO"/>
+                        <outlet property="reviewTextField" destination="cd7-0Q-95S" id="XNw-AW-WPN"/>
+                        <outlet property="saveButton" destination="tTg-jo-Z7V" id="SOj-Rm-C6k"/>
+                        <outlet property="stars" destination="JwN-rw-w6p" id="pI1-Ma-aWy"/>
                         <outlet property="titleText" destination="cd7-0Q-95S" id="gHC-LJ-19A"/>
                     </connections>
                 </viewController>
