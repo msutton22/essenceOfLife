@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C5E51EA50C980020A56C /* FunViewController.swift */; };
+		3F4BA05B1EA8FFBC0084B1FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */; };
 		3F9891571E9727C500D4892E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9891561E9727C500D4892E /* Review.swift */; };
 		3F9891591E9727EE00D4892E /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */; };
 		3F98915B1E97280300D4892E /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		3F32C5E51EA50C980020A56C /* FunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunViewController.swift; path = ../FunViewController.swift; sourceTree = "<group>"; };
+		3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F9891561E9727C500D4892E /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFB19861E82BD3800401134 /* AppDelegate.swift */,
+				3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */,
 				3FE420D11E9686D100686AEC /* MainPasswordViewController.swift */,
 				3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */,
 				3FACCC5C1EA7AD7300470A3C /* NewPasswordTableViewCell.swift */,
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4BA05B1EA8FFBC0084B1FA /* LoginViewController.swift in Sources */,
 				3F98915F1E97296100D4892E /* Review1TableViewController.swift in Sources */,
 				3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */,
 				3F9891571E9727C500D4892E /* Review.swift in Sources */,
