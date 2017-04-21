@@ -16,7 +16,6 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var reviewTextField: UITextField!
-    @IBOutlet weak var reviewText: UITextView!
     var review : Review?
     
     override func viewDidLoad() {
