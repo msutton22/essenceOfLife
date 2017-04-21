@@ -88,8 +88,8 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
 
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMealMode = presentingViewController is UINavigationController
-        if isPresentingInAddMealMode {
+        let isPresentingInAddReviewMode = presentingViewController is UINavigationController
+        if isPresentingInAddReviewMode {
             dismiss(animated: true, completion: nil)
         }
         else if let owningNavigationController = navigationController{
