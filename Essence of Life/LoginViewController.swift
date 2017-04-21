@@ -13,12 +13,12 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func loginAction(_ sender: Any) {
         authenticateUser()
     }
+   
     func authenticateUser() {
         let context = LAContext()
         var error: NSError?
@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     if success {
-                       // runSecretCode
                         print("IDENTIFIED!")
+                        self.performSegue(withIdentifier: "Logged", sender: nil)
                     } else {
                         let ac = UIAlertController(title: "Authentication failed", message: "Sorry!", preferredStyle: .alert)
                         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -45,11 +45,6 @@ class LoginViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
 
 }
