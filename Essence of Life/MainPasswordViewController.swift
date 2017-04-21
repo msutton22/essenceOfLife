@@ -13,6 +13,8 @@ class MainPasswordViewController: UIViewController
 
     @IBOutlet weak var addButton: UIBarButtonItem!
     
+    var passwords : [Password] = []
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
