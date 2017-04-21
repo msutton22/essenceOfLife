@@ -19,7 +19,7 @@ class ReviewTableViewController: UITableViewController {
 
         navigationItem.leftBarButtonItem = editButtonItem
         if let savedReviews = loadReviews() {
-            reviews += savedMeals
+            reviews += savedReviews
         }
 
     }
@@ -40,7 +40,7 @@ class ReviewTableViewController: UITableViewController {
         let review = reviews[indexPath.row]
         
         cell.labelReview.text = review.name
-        cell.photoReview.image = review.photo
+        cell.imageReview.image = review.photo
         cell.stars.rating = review.rating
         
         return cell
@@ -100,7 +100,7 @@ class ReviewTableViewController: UITableViewController {
     }
     
     private func saveReviews() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Review.ArchiveURL.path)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(reviews, toFile: Review.ArchiveURL.path)
         if isSuccessfulSave {
             os_log("Reviews saved", log: OSLog.default, type: .debug)
         } else {
