@@ -17,89 +17,103 @@ class ReviewTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        navigationItem.leftBarButtonItem = editButtonItem
+        if let savedReviews = loadReviews() {
+            reviews += savedMeals
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    
-    @IBAction func addButton(_ sender: UIBarButtonItem) {
+        return reviews.count
     }
     
-    
-    
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cellIdentifier = "ReviewTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
+            fatalError("Not of ReviewTableViewCell")
+        }
+        
+        let review = reviews[indexPath.row]
+        
+        cell.labelReview.text = review.name
+        cell.photoReview.image = review.photo
+        cell.stars.rating = review.rating
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+        case "AddItem":
+            os_log("Adding a new review", log: OSLog.default, type: .debug)
+        case "ShowDetail":
+            guard let reviewDetailViewController = segue.destination as? FunViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedReviewCell = sender as? ReviewTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            guard let indexPath = tableView.indexPath(for: selectedReviewCell) else {
+                fatalError("The cell not being displayed")
+            }
+            let selectedReview = reviews[indexPath.row]
+            reviewDetailViewController.review = selectedReview
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
     }
-    */
+    
+    @IBAction func unwindToReviewList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? FunViewController, let review = sourceViewController.review {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                reviews[selectedIndexPath.row] = review
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                let newIndexPath = IndexPath(row: reviews.count, section: 0)
+                
+                reviews.append(review)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+            saveReviews()
+        }
+        
+    }
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            reviews.remove(at: indexPath.row)
+            saveReviews()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    private func saveReviews() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Review.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Reviews saved", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed", log: OSLog.default, type: .error)
+        }
     }
-    */
+
+    
+    
+    private func loadReviews() -> [Review]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Review.ArchiveURL.path) as? [Review]
+    }
+    
+
 
 }
