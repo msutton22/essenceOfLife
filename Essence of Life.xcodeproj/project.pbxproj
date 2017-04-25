@@ -13,7 +13,6 @@
 		3F9891591E9727EE00D4892E /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */; };
 		3F98915B1E97280300D4892E /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */; };
 		3F98915D1E97290500D4892E /* StarControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98915C1E97290500D4892E /* StarControl.swift */; };
-		3F98915F1E97296100D4892E /* Review1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98915E1E97296100D4892E /* Review1TableViewController.swift */; };
 		3FACCC5D1EA7AD7300470A3C /* NewPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACCC5C1EA7AD7300470A3C /* NewPasswordTableViewCell.swift */; };
 		3FE420D21E9686D100686AEC /* MainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE420D11E9686D100686AEC /* MainPasswordViewController.swift */; };
 		3FE420D41E9686EB00686AEC /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */; };
@@ -50,7 +49,6 @@
 		3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		3F98915C1E97290500D4892E /* StarControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarControl.swift; path = ../StarControl.swift; sourceTree = "<group>"; };
-		3F98915E1E97296100D4892E /* Review1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review1TableViewController.swift; sourceTree = "<group>"; };
 		3FACCC5C1EA7AD7300470A3C /* NewPasswordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordTableViewCell.swift; sourceTree = "<group>"; };
 		3FE420D11E9686D100686AEC /* MainPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPasswordViewController.swift; sourceTree = "<group>"; };
 		3FE420D31E9686EB00686AEC /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				3FACCC5C1EA7AD7300470A3C /* NewPasswordTableViewCell.swift */,
 				3FF801751E9BD29800EFF1F9 /* PasswordClass.swift */,
 				3FFB198A1E82BD3800401134 /* Main.storyboard */,
-				3F98915E1E97296100D4892E /* Review1TableViewController.swift */,
 				3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */,
 				3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */,
 				3F32C5E51EA50C980020A56C /* FunViewController.swift */,
@@ -290,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4BA05B1EA8FFBC0084B1FA /* LoginViewController.swift in Sources */,
-				3F98915F1E97296100D4892E /* Review1TableViewController.swift in Sources */,
 				3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */,
 				3F9891571E9727C500D4892E /* Review.swift in Sources */,
 				3F9891591E9727EE00D4892E /* ReviewTableViewController.swift in Sources */,
