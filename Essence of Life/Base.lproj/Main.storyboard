@@ -309,7 +309,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gor-L3-iZi">
                             <connections>
                                 <action selector="addButton:" destination="LDU-BS-Txp" id="inV-xM-daW"/>
-                                <segue destination="5J3-yt-BpR" kind="presentation" id="2vh-gt-VUf"/>
+                                <segue destination="5J3-yt-BpR" kind="presentation" identifier="AddItem" id="2vh-gt-VUf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -510,6 +510,6 @@
         <image name="defaultImage" width="320" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Ja-nd-bCl"/>
+        <segue reference="2vh-gt-VUf"/>
     </inferredMetricsTieBreakers>
 </document>
