@@ -16,18 +16,18 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var reviewTextField: UITextField!
-    //@IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
 
     var review : Review?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewTextField.delegate = self
-        //typeTextField.delegate = self
+        typeTextField.delegate = self
         if let review = review {
             navigationItem.title = review.name
             reviewTextField.text = review.name
-           // typeTextField = review.type
+            typeTextField.text = review.type
             imageReview.image = review.photo
             stars.rating = review.rating
         }
@@ -61,7 +61,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
 
     @IBAction func onTappedImage(_ sender: UITapGestureRecognizer) {
         reviewTextField.resignFirstResponder()
-        //typeTextField.resignFirstResponder()
+        typeTextField.resignFirstResponder()
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
@@ -83,7 +83,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         let name = reviewTextField.text ?? ""
         let photo = imageReview.image
         let rating = stars.rating
-        //let type = typeTextField.text ?? ""
+        let type = typeTextField.text ?? ""
         
         review = Review(name: name, photo: photo, rating: rating, type: type)
     }
