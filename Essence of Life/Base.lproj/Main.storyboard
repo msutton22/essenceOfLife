@@ -316,8 +316,7 @@
                     <navigationItem key="navigationItem" title="Reviews" id="xih-8t-8Ec">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gor-L3-iZi">
                             <connections>
-                                <action selector="addButton:" destination="LDU-BS-Txp" id="inV-xM-daW"/>
-                                <segue destination="Ggd-qi-Kez" kind="presentation" identifier="AddItem" id="DID-cp-vYm"/>
+                                <segue destination="5J3-yt-BpR" kind="show" identifier="AddItem" id="3bS-WG-t9s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -327,7 +326,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlA-Nb-jP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447.1999999999998" y="37.331334332833585"/>
+            <point key="canvasLocation" x="4204" y="36"/>
         </scene>
         <!--New Review-->
         <scene sceneID="jJS-eI-FXH">
@@ -353,7 +352,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4Hw-tv-SE7" appends="YES" id="Ruf-f3-dly"/>
+                                    <outletCollection property="gestureRecognizers" destination="Shp-wW-MLS" appends="YES" id="1fV-zw-Kne"/>
                                 </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Type of Review Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsa-Je-tox">
@@ -363,14 +362,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-rw-w6p" customClass="StarControl" customModule="Essence_of_Life" customModuleProvider="target">
-                                <rect key="frame" x="114" y="573" width="1" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5j-KO-4lj" customClass="StarControl" customModule="Essence_of_Life" customModuleProvider="target">
+                                <rect key="frame" x="83" y="519" width="216" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -390,18 +384,16 @@
                     <connections>
                         <outlet property="cancelButton" destination="mgt-zM-kga" id="L7U-IE-84a"/>
                         <outlet property="imageReview" destination="hWt-FQ-oR8" id="0Td-Mg-WX1"/>
-                        <outlet property="imageView" destination="hWt-FQ-oR8" id="NS0-2E-WfW"/>
                         <outlet property="reviewTextField" destination="cd7-0Q-95S" id="XNw-AW-WPN"/>
                         <outlet property="saveButton" destination="tTg-jo-Z7V" id="SOj-Rm-C6k"/>
-                        <outlet property="stars" destination="JwN-rw-w6p" id="pI1-Ma-aWy"/>
-                        <outlet property="titleText" destination="cd7-0Q-95S" id="gHC-LJ-19A"/>
+                        <outlet property="stars" destination="i5j-KO-4lj" id="5cJ-Kh-cHQ"/>
                         <outlet property="typeTextField" destination="nsa-Je-tox" id="7Ld-VE-zvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXg-WJ-fh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4Hw-tv-SE7">
+                <tapGestureRecognizer id="Shp-wW-MLS">
                     <connections>
-                        <action selector="onTappedImage:" destination="5J3-yt-BpR" id="7Fe-5z-6Yr"/>
+                        <action selector="onTappedImage:" destination="5J3-yt-BpR" id="j39-N1-4yA"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -521,29 +513,11 @@
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="1676.311844077961"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5sz-Oa-UlN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ggd-qi-Kez" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dGW-Xy-xuY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5J3-yt-BpR" kind="relationship" relationship="rootViewController" id="NHF-AF-2Pd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3sc-3h-ar4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4602" y="552"/>
-        </scene>
     </scenes>
     <resources>
         <image name="defaultImage" width="320" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UJg-up-XRa"/>
+        <segue reference="3bS-WG-t9s"/>
     </inferredMetricsTieBreakers>
 </document>
