@@ -43,5 +43,11 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
         
     }
    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let newPasswordVC = segue.destination as! NewPasswordViewController
+        let selectedRow = passwordTableView.indexPathForSelectedRow?.row
+        newPasswordVC.myPasswords = passwords[selectedRow!]
+    }
 
 }
