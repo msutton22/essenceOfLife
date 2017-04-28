@@ -44,27 +44,10 @@ class NewPasswordViewController: UIViewController
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem)
     {
         
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        guard let button = sender as? UIBarButtonItem, button == saveButton else {
-            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
-            return
-        }
         myPasswords?.website = websiteTextfield.text!
         myPasswords?.username = usernameTextfield.text!
         myPasswords?.password = passwordTextfield.text!
     }
-    private func updateSaveButtonState()
-    {
-        let text1 = websiteTextfield.text ?? ""
-        saveButton.isEnabled = !text1.isEmpty
-        let text2 = usernameTextfield.text ?? ""
-        saveButton.isEnabled = !text2.isEmpty
-        let text3 = passwordTextfield.text ?? ""
-        saveButton.isEnabled = !text3.isEmpty
-    }
+    
+    
 }
