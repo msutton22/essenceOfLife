@@ -41,11 +41,11 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
+       // saveButton.isEnabled = false
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        updateSaveButtonState()
+       updateSaveButtonState()
         navigationItem.title = textField.text
     }
     
