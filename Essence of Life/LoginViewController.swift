@@ -5,6 +5,7 @@
 //  Created by rkalvani on 4/20/17.
 //  Copyright © 2017 Les Lentilz. All rights reserved.
 //
+//vaccinations, medcations, insurance #, dofferent doctor office contact info - last appointment, family history 
 
 import UIKit
 import LocalAuthentication
