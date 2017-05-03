@@ -40,7 +40,16 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem)
     {
+        let myAlert = UIAlertController(title: "Add New Website?", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        myAlert.addAction(cancelAction)
         
+        let addAction = UIAlertAction(title: "Add", style: .default) { (addAction) -> Void in
+            let websiteTextField = myAlert.textFields! [0] as UITextField
+            let usernameTextField = myAlert.textFields! [1] as UITextField
+            let passwordTextField = myAlert.textFields! [2] as UITextField
+            self.passwords.append(Password(Website: websiteTextField.text!, Username: usernameTextField.text!, Password: passwordTextField.text!))
+            self.passwordTableView.reloadData()
     }
    
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

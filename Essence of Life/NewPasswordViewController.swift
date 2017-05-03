@@ -45,6 +45,17 @@ class NewPasswordViewController: UIViewController
         myPasswords?.website = websiteTextfield.text!
         myPasswords?.username = usernameTextfield.text!
         myPasswords?.password = passwordTextfield.text!
+        
+        let isPresentingInAddReviewMode = presentingViewController is UINavigationController
+        if isPresentingInAddReviewMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("Not in a nav controller")
+        }
     }
     
     
