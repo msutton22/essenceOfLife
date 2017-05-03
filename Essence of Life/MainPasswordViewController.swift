@@ -51,6 +51,18 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
             self.passwords.append(Password(Website: websiteTextField.text!, Username: usernameTextField.text!, Password: passwordTextField.text!))
             self.passwordTableView.reloadData()
     }
+        myAlert.addAction(addAction)
+        myAlert.addTextField { (websiteTextField) in
+            websiteTextField.placeholder = "Add a website name"
+        }
+        myAlert.addTextField { (usernameTextField) in
+            usernameTextField.placeholder = "Add your username"
+        }
+        myAlert.addTextField { (passwordTextField) in
+            passwordTextField.placeholder = "Add your password"
+        }
+        self.present(myAlert, animated: true, completion: nil)
+    }
    
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
@@ -60,3 +72,4 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
     }
 
 }
+

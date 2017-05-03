@@ -107,7 +107,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sGB-Pm-JIo">
                             <connections>
                                 <action selector="addButtonTapped:" destination="zy8-7V-0fe" id="Em4-aA-Ifl"/>
-                                <segue destination="X15-z5-YVe" kind="show" id="yV0-C8-61o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
