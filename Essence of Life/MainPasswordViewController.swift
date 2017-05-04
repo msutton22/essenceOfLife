@@ -20,7 +20,6 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
     {
         super.viewDidLoad()
 
-        passwords.append(Password(Website: "twitter", Username: "123456", Password: "78970"))
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -62,13 +61,6 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
             passwordTextField.placeholder = "Add your password"
         }
         self.present(myAlert, animated: true, completion: nil)
-    }
-   
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        let newPasswordVC = segue.destination as! NewPasswordViewController
-        let selectedRow = passwordTableView.indexPathForSelectedRow?.row
-        newPasswordVC.myPasswords = passwords[selectedRow!]
     }
 
 }
