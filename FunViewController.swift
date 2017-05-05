@@ -41,7 +41,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-       // saveButton.isEnabled = false
+        //saveButton.isEnabled = false
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -51,7 +51,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("\(info)")
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
         imageReview.image = selectedImage
@@ -75,7 +75,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let button = sender as? UIBarButtonItem, button == saveButton else {
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
