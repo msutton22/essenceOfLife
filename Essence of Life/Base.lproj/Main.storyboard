@@ -62,7 +62,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ay-Yl-taj" id="SsY-t6-6vT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-Jd-2Y7">
@@ -464,7 +464,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Su-CV-qpB" id="aau-ht-9lD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="s3j-yC-mCH">
@@ -550,6 +550,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WQy-r1-8CZ" appends="YES" id="eht-qr-sFf"/>
+                                    <outletCollection property="gestureRecognizers" destination="WQy-r1-8CZ" appends="YES" id="rVg-jp-vyN"/>
                                 </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Type of Review Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsa-Je-tox">
@@ -575,6 +576,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tTg-jo-Z7V">
                             <connections>
                                 <action selector="saveButton:" destination="5J3-yt-BpR" id="lzX-TV-g3l"/>
+                                <segue destination="n70-R6-FCq" kind="unwind" unwindAction="unwindToReviewListWithSender:" id="aEZ-dl-gao"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -588,6 +590,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXg-WJ-fh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n70-R6-FCq" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="WQy-r1-8CZ">
                     <connections>
                         <action selector="onTappedImage:" destination="5J3-yt-BpR" id="hdH-TT-BH2"/>
