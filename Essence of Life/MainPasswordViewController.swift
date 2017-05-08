@@ -37,6 +37,33 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
         return passwords.count
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            passwords.remove(at: indexPath.row)
+            
+            passwordTableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+    {
+        let items = passwords[sourceIndexPath.row]
+        passwords.remove(at: sourceIndexPath.row)
+        passwords.insert(items, at: destinationIndexPath.row)
+    }
+    
+    @IBAction func editButtonTapped(_ sender: UIBarButtonItem)
+    {
+      passwordTableView.isEditing = !passwordTableView.isEditing
+    }
+    
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem)
     {
         let myAlert = UIAlertController(title: "Add New Website?", message: nil, preferredStyle: .alert)
