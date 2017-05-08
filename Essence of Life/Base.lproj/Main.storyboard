@@ -575,6 +575,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tTg-jo-Z7V">
                             <connections>
                                 <action selector="saveButton:" destination="5J3-yt-BpR" id="lzX-TV-g3l"/>
+                                <segue destination="Ab3-fW-Aun" kind="unwind" unwindAction="unwindToReviewListWithSender:" id="Vib-LQ-sF8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -588,9 +589,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXg-WJ-fh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ab3-fW-Aun" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="WQy-r1-8CZ">
                     <connections>
                         <action selector="onTappedImage:" destination="5J3-yt-BpR" id="hdH-TT-BH2"/>
+                        <outlet property="delegate" destination="hWt-FQ-oR8" id="gsW-2T-Zay"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
