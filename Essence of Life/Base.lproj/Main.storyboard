@@ -638,11 +638,11 @@
             </objects>
             <point key="canvasLocation" x="820" y="501"/>
         </scene>
-        <!--Item-->
+        <!--Reviews-->
         <scene sceneID="tWD-wR-dla">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Cy-Bi-kD9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lgm-u4-4wu"/>
+                    <tabBarItem key="tabBarItem" title="Reviews" image="review" id="lgm-u4-4wu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2Z-es-wbI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -657,11 +657,11 @@
             </objects>
             <point key="canvasLocation" x="2508" y="37.331334332833585"/>
         </scene>
-        <!--Item-->
+        <!--Passwords-->
         <scene sceneID="QPf-NY-kw8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fKC-vq-vHt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YT3-uQ-mCL"/>
+                    <tabBarItem key="tabBarItem" title="Passwords" image="passwords" id="YT3-uQ-mCL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0V8-jJ-wZC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -695,11 +695,11 @@
             </objects>
             <point key="canvasLocation" x="2671.1999999999998" y="1677.2113943028487"/>
         </scene>
-        <!--Item-->
+        <!--Medical-->
         <scene sceneID="i0b-gH-E6y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I5p-jW-zDo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="itS-kd-3gi"/>
+                    <tabBarItem key="tabBarItem" title="Medical" image="medical" id="itS-kd-3gi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="64c-ga-wFO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -717,6 +717,9 @@
     </scenes>
     <resources>
         <image name="defaultImage" width="320" height="240"/>
+        <image name="medical" width="12" height="12"/>
+        <image name="passwords" width="12" height="12"/>
+        <image name="review" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7ab-ON-1Ze"/>
