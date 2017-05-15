@@ -10,6 +10,8 @@
 		3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C5E51EA50C980020A56C /* FunViewController.swift */; };
 		3F4BA05B1EA8FFBC0084B1FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */; };
 		3F64BA651EC4ACF60094058F /* SleepTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64BA641EC4ACF60094058F /* SleepTableViewController.swift */; };
+		3F64BA671EC9F82D0094058F /* FamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64BA661EC9F82D0094058F /* FamilyTableViewCell.swift */; };
+		3F64BA691EC9F8E40094058F /* FamilyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64BA681EC9F8E40094058F /* FamilyTableViewController.swift */; };
 		3F9891571E9727C500D4892E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9891561E9727C500D4892E /* Review.swift */; };
 		3F9891591E9727EE00D4892E /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */; };
 		3F98915B1E97280300D4892E /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */; };
@@ -46,6 +48,8 @@
 		3F32C5E51EA50C980020A56C /* FunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunViewController.swift; path = ../FunViewController.swift; sourceTree = "<group>"; };
 		3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F64BA641EC4ACF60094058F /* SleepTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepTableViewController.swift; sourceTree = "<group>"; };
+		3F64BA661EC9F82D0094058F /* FamilyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTableViewCell.swift; sourceTree = "<group>"; };
+		3F64BA681EC9F8E40094058F /* FamilyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTableViewController.swift; sourceTree = "<group>"; };
 		3F9891561E9727C500D4892E /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,8 +123,10 @@
 				3F4BA05A1EA8FFBC0084B1FA /* LoginViewController.swift */,
 				3FE420D11E9686D100686AEC /* MainPasswordViewController.swift */,
 				3FACCC5C1EA7AD7300470A3C /* NewPasswordTableViewCell.swift */,
+				3F64BA661EC9F82D0094058F /* FamilyTableViewCell.swift */,
 				3FF801751E9BD29800EFF1F9 /* PasswordClass.swift */,
 				3FFB198A1E82BD3800401134 /* Main.storyboard */,
+				3F64BA681EC9F8E40094058F /* FamilyTableViewController.swift */,
 				3F64BA641EC4ACF60094058F /* SleepTableViewController.swift */,
 				3F9891581E9727EE00D4892E /* ReviewTableViewController.swift */,
 				3F98915A1E97280300D4892E /* ReviewTableViewCell.swift */,
@@ -287,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4BA05B1EA8FFBC0084B1FA /* LoginViewController.swift in Sources */,
+				3F64BA691EC9F8E40094058F /* FamilyTableViewController.swift in Sources */,
+				3F64BA671EC9F82D0094058F /* FamilyTableViewCell.swift in Sources */,
 				3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */,
 				3F9891571E9727C500D4892E /* Review.swift in Sources */,
 				3F9891591E9727EE00D4892E /* ReviewTableViewController.swift in Sources */,
