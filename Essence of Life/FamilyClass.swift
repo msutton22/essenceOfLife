@@ -11,15 +11,15 @@ import UIKit
 class FamilyClass: NSObject
 {
     var condition = ""
-    var realtionship = ""
+    var relationship = ""
     var side = ""
     
-    init (Con: String, Username: String, Password: String)
+    init (Condition: String, Relationship: String, Side: String)
     {
         super.init()
-        website = Website
-        username = Username
-        password = Password
+        condition = Condition
+        relationship = Relationship
+        side = Side
     }
     
     
