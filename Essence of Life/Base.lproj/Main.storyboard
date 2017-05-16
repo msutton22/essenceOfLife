@@ -414,18 +414,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j2j-sz-hgZ" id="5Gv-71-Vuk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0TQ-FT-GTf">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eGM-W6-RHG">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -548,7 +548,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WQy-r1-8CZ" appends="YES" id="eht-qr-sFf"/>
-                                    <outletCollection property="gestureRecognizers" destination="WQy-r1-8CZ" appends="YES" id="rVg-jp-vyN"/>
                                 </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Type of Review Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsa-Je-tox">
@@ -573,8 +572,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tTg-jo-Z7V">
                             <connections>
-                                <action selector="saveButton:" destination="5J3-yt-BpR" id="lzX-TV-g3l"/>
-                                <segue destination="Ab3-fW-Aun" kind="unwind" unwindAction="unwindToReviewListWithSender:" id="XoH-wp-dFf"/>
+                                <segue destination="Ab3-fW-Aun" kind="unwind" unwindAction="unwindToReviewListWithSender:" id="q76-Xz-T2b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -592,7 +590,6 @@
                 <tapGestureRecognizer id="WQy-r1-8CZ">
                     <connections>
                         <action selector="onTappedImage:" destination="5J3-yt-BpR" id="hdH-TT-BH2"/>
-                        <outlet property="delegate" destination="hWt-FQ-oR8" id="gsW-2T-Zay"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
