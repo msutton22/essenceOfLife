@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -470,7 +470,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="5Su-CV-qpB" customClass="ReviewTableViewCell" customModule="Essence_of_Life" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowDetail" rowHeight="149" id="5Su-CV-qpB" customClass="ReviewTableViewCell" customModule="Essence_of_Life" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Su-CV-qpB" id="aau-ht-9lD">
@@ -511,7 +511,7 @@
                                     <outlet property="labelReview" destination="SWi-gS-w3n" id="1GS-jQ-wwq"/>
                                     <outlet property="stars" destination="NfR-VH-VAA" id="GkG-cM-uNH"/>
                                     <outlet property="typeReview" destination="xF9-To-UYL" id="FYw-pG-WQc"/>
-                                    <segue destination="5J3-yt-BpR" kind="showDetail" identifier="ShowDetail" id="ovp-aA-lGn"/>
+                                    <segue destination="5J3-yt-BpR" kind="show" identifier="ShowDetail" id="x9p-Iw-4In"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -523,7 +523,7 @@
                     <navigationItem key="navigationItem" title="Reviews" id="xih-8t-8Ec">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gor-L3-iZi">
                             <connections>
-                                <segue destination="5J3-yt-BpR" kind="push" identifier="AddItem" id="7ab-ON-1Ze"/>
+                                <segue destination="96s-55-i6f" kind="presentation" identifier="AddItem" id="7ab-ON-1Ze"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -605,7 +605,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4866" y="37"/>
+            <point key="canvasLocation" x="5804" y="36.431784107946029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rLv-UL-5Ad">
@@ -739,6 +739,25 @@
             </objects>
             <point key="canvasLocation" x="2508" y="2569.5652173913045"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8jY-B8-w0M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="96s-55-i6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9Gz-xB-cTF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lNu-RL-rFx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5J3-yt-BpR" kind="relationship" relationship="rootViewController" id="eJH-bn-87b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajI-c7-BEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4778" y="220"/>
+        </scene>
     </scenes>
     <resources>
         <image name="defaultImage" width="320" height="240"/>
@@ -747,6 +766,6 @@
         <image name="review" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7ab-ON-1Ze"/>
+        <segue reference="eJH-bn-87b"/>
     </inferredMetricsTieBreakers>
 </document>
