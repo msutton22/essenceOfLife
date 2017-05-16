@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FamilyTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource
+class FamilyTableViewController: UITableViewController
 {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -23,7 +23,7 @@ class FamilyTableViewController: UITableViewController, UITableViewDelegate, UIT
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "famCell", for: indexPath) as! FamilyTableViewCell
         cell.conditionLabel.text = familyMembers[indexPath.row].condition
@@ -33,31 +33,31 @@ class FamilyTableViewController: UITableViewController, UITableViewDelegate, UIT
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return familyMembers.count
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == .delete
         {
-            passwords.remove(at: indexPath.row)
+            familyMembers.remove(at: indexPath.row)
             
-            passwordTableView.reloadData()
+            familyTableView.reloadData()
         }
     }
     
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
         return true
     }
     
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
     {
-        let items = passwords[sourceIndexPath.row]
-        passwords.remove(at: sourceIndexPath.row)
-        passwords.insert(items, at: destinationIndexPath.row)
+        let items = familyMembers[sourceIndexPath.row]
+        familyMembers.remove(at: sourceIndexPath.row)
+        familyMembers.insert(items, at: destinationIndexPath.row)
     }
 
     
