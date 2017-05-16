@@ -25,12 +25,12 @@ class FamilyTableViewController: UITableViewController, UITableViewDelegate, UIT
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell1 = tableView.dequeueReusableCell(withIdentifier: "famCell", for: indexPath) as! familyTableViewCell
-        cell1.condi = passwords[indexPath.row].website
-        cell1.usernameLabel.text = passwords[indexPath.row].username
-        cell1.passwordLabel.text = passwords[indexPath.row].password
+        let cell = tableView.dequeueReusableCell(withIdentifier: "famCell", for: indexPath) as! FamilyTableViewCell
+        cell.conditionLabel.text = familyMembers[indexPath.row].condition
+        cell.relationshipLabel.text = familyMembers[indexPath.row].relationship
+        cell.sideLabel.text = familyMembers[indexPath.row].side
         
-        return cell1
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
