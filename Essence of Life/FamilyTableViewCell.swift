@@ -10,7 +10,9 @@ import UIKit
 
 class FamilyTableViewCell: UITableViewCell
 {
-
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var relationshipLabel: UILabel!
+    @IBOutlet weak var sideLabel: UILabel!
     override func awakeFromNib()
     {
         super.awakeFromNib()
@@ -20,7 +22,7 @@ class FamilyTableViewCell: UITableViewCell
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    
     }
 
 }
