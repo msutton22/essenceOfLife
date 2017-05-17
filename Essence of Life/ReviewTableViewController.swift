@@ -69,7 +69,7 @@ class ReviewTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToReviewList(sender: UIStoryboardSegue) {
+   func unwindToReviewList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? FunViewController, let review = sourceViewController.review {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 reviews[selectedIndexPath.row] = review
