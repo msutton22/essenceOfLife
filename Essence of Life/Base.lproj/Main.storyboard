@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,15 +22,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI6-al-QTT">
-                                <rect key="frame" x="152" y="425" width="46" height="30"/>
+                                <rect key="frame" x="155" y="532" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2V-rl-HcT"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The Essence of Life Title" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-gh-71l">
+                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="qj2-lj-ZFs"/>
+                                    <constraint firstAttribute="height" constant="280" id="tBr-cE-4V8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use your fingerprint to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEe-3b-1Cg">
+                                <rect key="frame" x="117" y="406" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VdJ-gh-71l" secondAttribute="trailing" id="LM1-1X-TOg"/>
+                            <constraint firstItem="VdJ-gh-71l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c3i-3N-AFS"/>
+                            <constraint firstItem="VdJ-gh-71l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cqq-gR-vrL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rYL-oc-AYc"/>
                     <connections>
@@ -39,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="501"/>
+            <point key="canvasLocation" x="5.5999999999999996" y="500.59970014992507"/>
         </scene>
         <!--Passwords-->
         <scene sceneID="uIo-a0-iWo">
@@ -478,7 +497,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowDetail" rowHeight="149" id="5Su-CV-qpB" customClass="ReviewTableViewCell" customModule="Essence_of_Life" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewTableViewCell" rowHeight="149" id="5Su-CV-qpB" customClass="ReviewTableViewCell" customModule="Essence_of_Life" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Su-CV-qpB" id="aau-ht-9lD">
@@ -531,7 +550,7 @@
                     <navigationItem key="navigationItem" title="Reviews" id="xih-8t-8Ec">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gor-L3-iZi">
                             <connections>
-                                <segue destination="96s-55-i6f" kind="presentation" identifier="AddItem" id="7ab-ON-1Ze"/>
+                                <segue destination="5J3-yt-BpR" kind="show" identifier="AddItem" id="4Gm-a3-t7Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -600,7 +619,7 @@
                         <outlet property="cancelButton" destination="mgt-zM-kga" id="L7U-IE-84a"/>
                         <outlet property="imageReview" destination="hWt-FQ-oR8" id="0Td-Mg-WX1"/>
                         <outlet property="reviewTextField" destination="cd7-0Q-95S" id="XNw-AW-WPN"/>
-                        <outlet property="saveButton" destination="tTg-jo-Z7V" id="SOj-Rm-C6k"/>
+                        <outlet property="saveButton" destination="tTg-jo-Z7V" id="leX-zT-spy"/>
                         <outlet property="stars" destination="i5j-KO-4lj" id="5cJ-Kh-cHQ"/>
                         <outlet property="typeTextField" destination="nsa-Je-tox" id="7Ld-VE-zvx"/>
                     </connections>
@@ -613,7 +632,36 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5804" y="36.431784107946029"/>
+            <point key="canvasLocation" x="4980" y="37"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="GoA-3I-yzW">
+            <objects>
+                <tableViewController id="Cfr-2z-H1W" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qpW-zJ-e6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TDu-w2-i56">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TDu-w2-i56" id="HEP-gv-cWg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cfr-2z-H1W" id="uJe-v7-77g"/>
+                            <outlet property="delegate" destination="Cfr-2z-H1W" id="0Q9-wZ-7Dr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="gxP-hO-oF2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhK-FN-FNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4440" y="721"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rLv-UL-5Ad">
@@ -747,33 +795,15 @@
             </objects>
             <point key="canvasLocation" x="2508" y="2569.5652173913045"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8jY-B8-w0M">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="96s-55-i6f" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9Gz-xB-cTF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lNu-RL-rFx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5J3-yt-BpR" kind="relationship" relationship="rootViewController" id="eJH-bn-87b"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ajI-c7-BEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4778" y="220"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="The Essence of Life Title" width="960" height="720"/>
         <image name="defaultImage" width="320" height="240"/>
         <image name="medical" width="32" height="32"/>
         <image name="passwords" width="32" height="32"/>
         <image name="review" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eJH-bn-87b"/>
+        <segue reference="4Gm-a3-t7Z"/>
     </inferredMetricsTieBreakers>
 </document>
