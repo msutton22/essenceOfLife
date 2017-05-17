@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -200,32 +200,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-5g-HFc">
-                                <rect key="frame" x="164" y="222" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Doctors"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-5g-HFc">
+                                <rect key="frame" x="153" y="121" width="65" height="64"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Doctors" image="002-doctor"/>
                                 <connections>
                                     <segue destination="7nj-p7-6Kz" kind="show" id="EoU-AQ-SR9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-Pk-DIt">
-                                <rect key="frame" x="164" y="318" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Personal"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-Pk-DIt">
+                                <rect key="frame" x="153" y="286" width="68" height="64"/>
+                                <state key="normal" title="Personal" image="003-first-aid-kit"/>
                                 <connections>
                                     <segue destination="Cpt-Jj-nWG" kind="show" id="F6k-sZ-hof"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oz-E1-vRd">
-                                <rect key="frame" x="164" y="425" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Family"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oz-E1-vRd">
+                                <rect key="frame" x="153" y="453" width="68" height="64"/>
+                                <state key="normal" title="Family" image="001-social-services"/>
                                 <connections>
                                     <segue destination="xLE-aH-cgQ" kind="show" id="en0-v5-5hw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Doctors and Specialists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bml-eh-yEo">
+                                <rect key="frame" x="95" y="193" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Personal Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8i-aT-8Ke">
+                                <rect key="frame" x="122" y="358" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Family History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnX-xJ-eRx">
+                                <rect key="frame" x="115" y="525" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8i-aT-8Ke" firstAttribute="top" secondItem="A4F-Pk-DIt" secondAttribute="bottom" constant="8" id="L3V-02-fJ7"/>
+                            <constraint firstItem="wQ7-5g-HFc" firstAttribute="top" secondItem="Ybe-48-otm" secondAttribute="bottom" constant="57" id="Mrt-Fi-70S"/>
+                            <constraint firstItem="RnX-xJ-eRx" firstAttribute="top" secondItem="6oz-E1-vRd" secondAttribute="bottom" constant="8" id="TUT-ft-EEu"/>
+                            <constraint firstItem="Bml-eh-yEo" firstAttribute="top" secondItem="wQ7-5g-HFc" secondAttribute="bottom" constant="8" id="hlw-jk-26A"/>
+                            <constraint firstItem="A4F-Pk-DIt" firstAttribute="top" secondItem="Bml-eh-yEo" secondAttribute="bottom" constant="72" id="ho1-7U-3I4"/>
+                            <constraint firstItem="6oz-E1-vRd" firstAttribute="top" secondItem="o8i-aT-8Ke" secondAttribute="bottom" constant="74" id="tWT-YQ-fxX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eMu-nu-ACE"/>
                 </viewController>
@@ -668,7 +692,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sPI-Ab-DWQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ikk-zs-h9E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ikk-zs-h9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -707,7 +731,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Cy-Bi-kD9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reviews" image="review" id="lgm-u4-4wu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2Z-es-wbI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="r2Z-es-wbI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -726,7 +750,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fKC-vq-vHt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Passwords" image="passwords" id="YT3-uQ-mCL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0V8-jJ-wZC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0V8-jJ-wZC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -745,7 +769,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="akn-X5-NCv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="mK8-9J-R1v"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UtD-pA-kaL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UtD-pA-kaL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -782,7 +806,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xLE-aH-cgQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e5M-qJ-sFH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="e5M-qJ-sFH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -797,6 +821,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="001-social-services" width="64" height="64"/>
+        <image name="002-doctor" width="64" height="64"/>
+        <image name="003-first-aid-kit" width="64" height="64"/>
         <image name="The Essence of Life Title" width="960" height="720"/>
         <image name="defaultImage" width="320" height="240"/>
         <image name="medical" width="32" height="32"/>
