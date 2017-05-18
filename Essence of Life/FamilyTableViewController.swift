@@ -60,6 +60,14 @@ class FamilyTableViewController: UITableViewController
         familyMembers.insert(items, at: destinationIndexPath.row)
     }
 
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem)
+    {
+        
+    }
     
+    @IBAction func EditButtonTapped(_ sender: UIBarButtonItem)
+    {
+        
+    }
 
 }
