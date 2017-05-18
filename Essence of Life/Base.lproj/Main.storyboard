@@ -84,13 +84,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-Jd-2Y7">
-                                                    <rect key="frame" x="8" y="8" width="163" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-6i-UwF">
                                                     <rect key="frame" x="8" y="56" width="163" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,6 +95,13 @@
                                                     <rect key="frame" x="204" y="56" width="163" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-Jd-2Y7">
+                                                    <rect key="frame" x="8" y="8" width="163" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -142,51 +142,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25Y-53-ivh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2671.1999999999998" y="763.26836581709154"/>
-        </scene>
-        <!--Sleep Table View Controller-->
-        <scene sceneID="plN-Vb-POv">
-            <objects>
-                <viewController id="BOl-R8-lyO" customClass="SleepTableViewController" customModule="Essence_of_Life" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jwG-lc-j4W"/>
-                        <viewControllerLayoutGuide type="bottom" id="uOE-df-gRQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aSD-XU-YaU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3SE-g7-IYh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="0Vq-l5-WHB" style="IBUITableViewCellStyleDefault" id="D78-d0-s1O">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D78-d0-s1O" id="E4J-nN-Byf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Vq-l5-WHB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="eAQ-Ca-pqf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CSU-si-50j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3610.4000000000001" y="1677.2113943028487"/>
         </scene>
         <!--Medical View Controller-->
         <scene sceneID="TRg-SR-6Zv">
@@ -520,7 +475,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tHI-A6-pRG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RTU-Ol-fSd"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="VWh-xl-9ay">
+                            <connections>
+                                <action selector="EditButtonTapped:" destination="huT-Jf-9Bu" id="FU6-ql-zlH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RTU-Ol-fSd">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="huT-Jf-9Bu" id="iuH-La-fes"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -736,7 +700,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="fKC-vq-vHt" kind="relationship" relationship="viewControllers" id="xOp-oO-Rrx"/>
-                        <segue destination="akn-X5-NCv" kind="relationship" relationship="viewControllers" id="KJT-XA-WoE"/>
                         <segue destination="I5p-jW-zDo" kind="relationship" relationship="viewControllers" id="25c-81-B5j"/>
                         <segue destination="0Cy-Bi-kD9" kind="relationship" relationship="viewControllers" id="ibZ-d3-uIo"/>
                     </connections>
