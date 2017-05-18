@@ -59,15 +59,38 @@ class FamilyTableViewController: UITableViewController
         familyMembers.remove(at: sourceIndexPath.row)
         familyMembers.insert(items, at: destinationIndexPath.row)
     }
+    
+    
 
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem)
     {
+        let myAlert = UIAlertController(title: "Add New Information?", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        myAlert.addAction(cancelAction)
         
+        let addAction = UIAlertAction(title: "Add", style: .default) { (addAction) -> Void in
+            let conditionTextField = myAlert.textFields! [0] as UITextField
+            let relationshipTextField = myAlert.textFields! [1] as UITextField
+            let sideTextField = myAlert.textFields! [2] as UITextField
+            self.familyMembers.append(FamilyClass(Condition: conditionTextField.text!, Relationship: relationshipTextField.text!, Side: sideTextField.text!))
+            self.familyTableView.reloadData()
+        }
+        myAlert.addAction(addAction)
+        myAlert.addTextField { (conditionTextField) in
+            conditionTextField.placeholder = "Add a website name"
+        }
+        myAlert.addTextField { (relationshipTextField) in
+            relationshipTextField.placeholder = "Add your username"
+        }
+        myAlert.addTextField { (sideTextField) in
+            sideTextField.placeholder = "Add your password"
+        }
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     @IBAction func EditButtonTapped(_ sender: UIBarButtonItem)
     {
-        
+        familyTableView.isEditing = !familyTableView.isEditing
     }
 
 }
