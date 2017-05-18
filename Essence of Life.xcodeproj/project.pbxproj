@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F251ECB1ECDE67B00712F38 /* PersonalMedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F251ECA1ECDE67B00712F38 /* PersonalMedicalViewController.swift */; };
 		3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C5E51EA50C980020A56C /* FunViewController.swift */; };
 		3F48B07F1EC9F66900049891 /* MedicalSchedulingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F48B07E1EC9F66900049891 /* MedicalSchedulingViewController.swift */; };
 		3F48B0811EC9F74600049891 /* MedicalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F48B0801EC9F74600049891 /* MedicalTableViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F251ECA1ECDE67B00712F38 /* PersonalMedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMedicalViewController.swift; sourceTree = "<group>"; };
 		3F32C5E51EA50C980020A56C /* FunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunViewController.swift; path = ../FunViewController.swift; sourceTree = "<group>"; };
 		3F48B07E1EC9F66900049891 /* MedicalSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalSchedulingViewController.swift; sourceTree = "<group>"; };
 		3F48B0801EC9F74600049891 /* MedicalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalTableViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3F48B0841EC9F7C400049891 /* MedicalList.swift */,
 				3F48B0801EC9F74600049891 /* MedicalTableViewController.swift */,
 				3F48B07E1EC9F66900049891 /* MedicalSchedulingViewController.swift */,
+				3F251ECA1ECDE67B00712F38 /* PersonalMedicalViewController.swift */,
 				3F64BA641EC4ACF60094058F /* SleepTableViewController.swift */,
 				3FFB198D1E82BD3800401134 /* Assets.xcassets */,
 				3FFB198F1E82BD3800401134 /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 				3F64BA691EC9F8E40094058F /* FamilyTableViewController.swift in Sources */,
 				3F64BA671EC9F82D0094058F /* FamilyTableViewCell.swift in Sources */,
 				3F32C5E61EA50C980020A56C /* FunViewController.swift in Sources */,
+				3F251ECB1ECDE67B00712F38 /* PersonalMedicalViewController.swift in Sources */,
 				3F9891571E9727C500D4892E /* Review.swift in Sources */,
 				3F48B0811EC9F74600049891 /* MedicalTableViewController.swift in Sources */,
 				3F64BA6B1ECB45150094058F /* FamilyClass.swift in Sources */,
