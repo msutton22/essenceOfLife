@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		3F251ECA1ECDE67B00712F38 /* PersonalMedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMedicalViewController.swift; sourceTree = "<group>"; };
+		3F2E4FCE1ECF3FE700ADBDF3 /* Waves.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Waves.m4a; sourceTree = "<group>"; };
 		3F32C5E51EA50C980020A56C /* FunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunViewController.swift; path = ../FunViewController.swift; sourceTree = "<group>"; };
 		3F48B07E1EC9F66900049891 /* MedicalSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalSchedulingViewController.swift; sourceTree = "<group>"; };
 		3F48B0801EC9F74600049891 /* MedicalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalTableViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				3F48B07E1EC9F66900049891 /* MedicalSchedulingViewController.swift */,
 				3F251ECA1ECDE67B00712F38 /* PersonalMedicalViewController.swift */,
 				3F64BA641EC4ACF60094058F /* SleepTableViewController.swift */,
+				3F2E4FCE1ECF3FE700ADBDF3 /* Waves.m4a */,
 				3FFB198D1E82BD3800401134 /* Assets.xcassets */,
 				3FFB198F1E82BD3800401134 /* LaunchScreen.storyboard */,
 				3FFB19921E82BD3800401134 /* Info.plist */,

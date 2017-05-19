@@ -25,9 +25,9 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell1 = tableView.dequeueReusableCell(withIdentifier: "passwordCell", for: indexPath) as! NewPasswordTableViewCell
-        cell1.websiteLabel.text = passwords[indexPath.row].website
-        cell1.usernameLabel.text = passwords[indexPath.row].username
-        cell1.passwordLabel.text = passwords[indexPath.row].password
+        cell1.websiteLabel.text = "Website: \(passwords[indexPath.row].website)"
+        cell1.usernameLabel.text = "Username: \(passwords[indexPath.row].username)"
+        cell1.passwordLabel.text = "Password: \(passwords[indexPath.row].password)"
         
         return cell1
     }

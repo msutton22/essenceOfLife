@@ -9,6 +9,9 @@
 
 import UIKit
 import LocalAuthentication
+import AVFoundation
+
+var backgroundSounds : AVAudioPlayer = AVAudioPlayer()
 
 class LoginViewController: UIViewController {
 
@@ -18,6 +21,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginAction(_ sender: Any) {
         authenticateUser()
+        
+    
     }
    
     func authenticateUser() {
