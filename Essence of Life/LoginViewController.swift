@@ -9,15 +9,38 @@
 
 import UIKit
 import LocalAuthentication
+import AVFoundation
 
-class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+
+class LoginViewController: UIViewController
+{
+    
+  var backgroundSounds:AVAudioPlayer = AVAudioPlayer()
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "waves", ofType: "mp3")
+            try backgroundSounds = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            backgroundSounds.numberOfLoops = -1
+            backgroundSounds.play()
+        }
+        catch
+        {
+            //ERROR
+        }
+        
+       
     }
 
     @IBAction func loginAction(_ sender: Any) {
         authenticateUser()
+        
     }
    
     func authenticateUser() {
