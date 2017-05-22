@@ -20,9 +20,6 @@ class FamilyTableViewController: UIViewController, UITableViewDataSource, UITabl
     {
         super.viewDidLoad()
         
-      
-
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -94,21 +91,7 @@ class FamilyTableViewController: UIViewController, UITableViewDataSource, UITabl
     {
         familyTableView.isEditing = !familyTableView.isEditing
     }
-    @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem)
-    {
-        let isPresentingInAddReviewMode = presentingViewController is UINavigationController
-        if isPresentingInAddReviewMode {
-            dismiss(animated: true, completion: nil)
-        }
-        else if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
-        }
-        else {
-            fatalError("Not in a nav controller")
-        }
-
-    }
-    
+        
     
 
 }
