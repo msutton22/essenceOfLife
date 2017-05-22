@@ -14,7 +14,7 @@ class MedicalTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(MedicalTableViewController.refreshList), name: NSNotification.Name(rawValue: "MedicalListShouldRefresh"), object: nil)
+  //      NotificationCenter.default.addObserver(self, selector: #selector(MedicalTableViewController.refreshList), name: NSNotification.Name(rawValue: "MedicalListShouldRefresh"), object: nil)
         
     }
     
@@ -22,11 +22,9 @@ class MedicalTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         refreshList()
     }
+   
     func refreshList() {
         medicalItems = MedicalList.sharedInstance.allItems()
-        if (medicalItems.count >= 64) {
-            self.navigationItem.rightBarButtonItem!.isEnabled = false // disable 'add' button
-        }
         tableView.reloadData()
     }
     
