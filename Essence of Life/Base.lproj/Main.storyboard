@@ -213,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="1828" y="1675.4122938530736"/>
         </scene>
-        <!--Medical Table View Controller-->
+        <!--Title-->
         <scene sceneID="zZH-RX-5qO">
             <objects>
                 <tableViewController id="djL-aJ-pDu" customClass="MedicalTableViewController" customModule="Essence_of_Life" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,12 +222,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JR3-QW-tse">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="medicalCell" textLabel="cMZ-PU-24Y" detailTextLabel="ZAk-ES-gRA" style="IBUITableViewCellStyleSubtitle" id="JR3-QW-tse">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JR3-QW-tse" id="Iat-jd-qoQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cMZ-PU-24Y">
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZAk-ES-gRA">
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -236,18 +252,19 @@
                             <outlet property="delegate" destination="djL-aJ-pDu" id="lD4-zA-LoF"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="          Add A New Doctor or Specialist" id="mrN-qj-ZQk">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="ipZ-iq-TUs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fUI-bh-bLU">
                             <connections>
-                                <segue destination="ZLO-Zh-irj" kind="show" id="4qk-yW-f69"/>
+                                <segue destination="ZLO-Zh-irj" kind="show" id="xNK-ed-VSw"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJg-4x-qL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="2355"/>
+            <point key="canvasLocation" x="972" y="2443"/>
         </scene>
         <!--Medical Scheduling View Controller-->
         <scene sceneID="VRa-ND-Xnd">
@@ -309,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFz-PW-zfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="3333"/>
+            <point key="canvasLocation" x="972" y="3222"/>
         </scene>
         <!--Personal Medical View Controller-->
         <scene sceneID="Ee4-Jh-QkK">
