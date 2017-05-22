@@ -9,27 +9,20 @@
 import UIKit
 
 class MedicalSchedulingViewController: UIViewController {
+    @IBOutlet weak var titleField: UITextField!
 
+    @IBOutlet weak var deadlinePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func savePress(_ sender: Any) {
+        let medicalItem = MedicalItem(deadline: deadlinePicker.date, title: titleField.text!, UUID: UUID().uuidString)
+        MedicalList.sharedInstance.addItem(medicalItem)
+       // let _ = self.navigationController?.popToViewController(MedicalTableViewController, animated: true)    
     }
-    */
-
+   
+   
 }
