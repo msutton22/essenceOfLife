@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FamilyTableViewController: UITableViewController
+class FamilyTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -19,26 +19,28 @@ class FamilyTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+      
 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "famCell", for: indexPath) as! FamilyTableViewCell
-        cell.conditionLabel.text = familyMembers[indexPath.row].condition
-        cell.relationshipLabel.text = familyMembers[indexPath.row].relationship
-        cell.sideLabel.text = familyMembers[indexPath.row].side
+        cell.conditionLabel.text = "Condition: \(familyMembers[indexPath.row].condition)"
+        cell.relationshipLabel.text = "Relationship: \(familyMembers[indexPath.row].relationship)"
+        cell.sideLabel.text = "Side: \(familyMembers[indexPath.row].side)"
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return familyMembers.count
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == .delete
         {
@@ -48,12 +50,12 @@ class FamilyTableViewController: UITableViewController
         }
     }
     
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
     {
         let items = familyMembers[sourceIndexPath.row]
         familyMembers.remove(at: sourceIndexPath.row)
@@ -77,13 +79,13 @@ class FamilyTableViewController: UITableViewController
         }
         myAlert.addAction(addAction)
         myAlert.addTextField { (conditionTextField) in
-            conditionTextField.placeholder = "Add a website name"
+            conditionTextField.placeholder = "Add a condition"
         }
         myAlert.addTextField { (relationshipTextField) in
-            relationshipTextField.placeholder = "Add your username"
+            relationshipTextField.placeholder = "Add family relationship"
         }
         myAlert.addTextField { (sideTextField) in
-            sideTextField.placeholder = "Add your password"
+            sideTextField.placeholder = "Add side of family"
         }
         self.present(myAlert, animated: true, completion: nil)
     }
@@ -92,5 +94,21 @@ class FamilyTableViewController: UITableViewController
     {
         familyTableView.isEditing = !familyTableView.isEditing
     }
+    @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem)
+    {
+        let isPresentingInAddReviewMode = presentingViewController is UINavigationController
+        if isPresentingInAddReviewMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("Not in a nav controller")
+        }
+
+    }
+    
+    
 
 }
