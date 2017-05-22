@@ -61,6 +61,7 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
 
     @IBAction func onTappedImage(_ sender: UITapGestureRecognizer) {
         reviewTextField.resignFirstResponder()
+        print("Tapped")
         typeTextField.resignFirstResponder()
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
