@@ -9,15 +9,20 @@
 import UIKit
 
 class MedicalSchedulingViewController: UIViewController {
+    @IBOutlet weak var titleField: UITextField!
 
+    @IBOutlet weak var deadlinePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    @IBAction func savePressed(_ sender: UIButton) {
+    @IBAction func savePress(_ sender: Any) {
         let medicalItem = MedicalItem(deadline: deadlinePicker.date, title: titleField.text!, UUID: UUID().uuidString)
-        MedicalList.sharedInstance.addItem(medicalItem) // schedule a local notification to persist this item
-        let _ = self.navigationController?.popToRootViewController(animated: true) // return to list view
+        MedicalList.sharedInstance.addItem(medicalItem)
+       // let _ = self.navigationController?.popToViewController(MedicalTableViewController, animated: true)    
     }
+   
+   
 }

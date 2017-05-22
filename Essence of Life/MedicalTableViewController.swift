@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MedicalTableViewController: UIViewController {
+class MedicalTableViewController: UITableViewController {
 
     var medicalItems: [MedicalItem] = []
     
