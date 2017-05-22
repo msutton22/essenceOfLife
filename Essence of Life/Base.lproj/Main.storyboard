@@ -203,9 +203,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="A4F-Pk-DIt" firstAttribute="centerY" secondItem="IP2-3E-1aD" secondAttribute="centerY" id="2l1-JW-puA"/>
                             <constraint firstItem="wQ7-5g-HFc" firstAttribute="centerX" secondItem="IP2-3E-1aD" secondAttribute="centerX" id="Csq-aF-jQM"/>
                             <constraint firstItem="o8i-aT-8Ke" firstAttribute="top" secondItem="A4F-Pk-DIt" secondAttribute="bottom" constant="8" id="L3V-02-fJ7"/>
-                            <constraint firstItem="wQ7-5g-HFc" firstAttribute="top" secondItem="Ybe-48-otm" secondAttribute="bottom" constant="57" id="Mrt-Fi-70S"/>
                             <constraint firstItem="RnX-xJ-eRx" firstAttribute="top" secondItem="6oz-E1-vRd" secondAttribute="bottom" constant="8" id="TUT-ft-EEu"/>
                             <constraint firstItem="Bml-eh-yEo" firstAttribute="top" secondItem="wQ7-5g-HFc" secondAttribute="bottom" constant="8" id="hlw-jk-26A"/>
                             <constraint firstItem="A4F-Pk-DIt" firstAttribute="top" secondItem="Bml-eh-yEo" secondAttribute="bottom" constant="72" id="ho1-7U-3I4"/>
@@ -791,6 +791,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="x9p-Iw-4In"/>
-        <segue reference="avf-Wq-9OH"/>
+        <segue reference="Ot3-XV-dBN"/>
     </inferredMetricsTieBreakers>
 </document>
