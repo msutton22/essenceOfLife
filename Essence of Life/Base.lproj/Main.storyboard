@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -236,18 +236,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JR3-QW-tse" id="Iat-jd-qoQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cMZ-PU-24Y">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZAk-ES-gRA">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -611,9 +611,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-FQ-oR8">
                                 <rect key="frame" x="29" y="109" width="318" height="197"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="WQy-r1-8CZ" appends="YES" id="eht-qr-sFf"/>
-                                </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5j-KO-4lj" customClass="StarControl" customModule="Essence_of_Life" customModuleProvider="target">
                                 <rect key="frame" x="83" y="519" width="216" height="46"/>
@@ -624,10 +621,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chL-VG-Yll">
+                                <rect key="frame" x="141" y="314" width="92" height="30"/>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="onTappedLibrary:" destination="5J3-yt-BpR" eventType="touchUpInside" id="pJU-KJ-Bji"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nsa-Je-tox" firstAttribute="top" secondItem="cd7-0Q-95S" secondAttribute="bottom" constant="45" id="2bc-cy-k5I"/>
+                            <constraint firstItem="chL-VG-Yll" firstAttribute="centerX" secondItem="pz7-xY-QYO" secondAttribute="centerX" id="3oF-ap-74L"/>
                             <constraint firstItem="cd7-0Q-95S" firstAttribute="top" secondItem="hWt-FQ-oR8" secondAttribute="bottom" constant="56" id="MZI-ft-1pA"/>
                             <constraint firstItem="hWt-FQ-oR8" firstAttribute="centerX" secondItem="pz7-xY-QYO" secondAttribute="centerX" id="RX8-Xb-R3Y"/>
                             <constraint firstItem="i5j-KO-4lj" firstAttribute="top" secondItem="nsa-Je-tox" secondAttribute="bottom" constant="52" id="TQd-HL-Rq9"/>
@@ -660,11 +665,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXg-WJ-fh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ab3-fW-Aun" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="WQy-r1-8CZ">
-                    <connections>
-                        <action selector="onTappedImage:" destination="5J3-yt-BpR" id="hdH-TT-BH2"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4980" y="37"/>
         </scene>

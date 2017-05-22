@@ -17,19 +17,22 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var reviewTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
-
+let imagePicker = UIImagePickerController()
     var review : Review?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewTextField.delegate = self
         typeTextField.delegate = self
+        imagePicker.delegate = self
+
         if let review = review {
             navigationItem.title = review.name
             reviewTextField.text = review.name
             typeTextField.text = review.type
             imageReview.image = review.photo
             stars.rating = review.rating
+            
         }
         updateSaveButtonState()
         
@@ -49,17 +52,25 @@ class FunViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         navigationItem.title = textField.text
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        
-        imageReview.image = selectedImage
-        dismiss(animated: true, completion: nil)
-    }
+   
     
 
+    @IBAction func onTappedLibrary(_ sender: AnyObject) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true) { () -> Void in
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageReview.image = selectedImage
+        }
+    }
+
+
+    
     @IBAction func onTappedImage(_ sender: UITapGestureRecognizer) {
+        print("Tapped")
         reviewTextField.resignFirstResponder()
         print("Tapped")
         typeTextField.resignFirstResponder()
