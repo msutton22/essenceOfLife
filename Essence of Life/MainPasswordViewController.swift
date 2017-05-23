@@ -66,7 +66,7 @@ class MainPasswordViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem)
     {
-        let myAlert = UIAlertController(title: "Add New Website?", message: nil, preferredStyle: .alert)
+        let myAlert = UIAlertController(title: "Add New Login?", message: nil, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
         myAlert.addAction(cancelAction)
         
