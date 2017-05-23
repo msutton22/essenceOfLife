@@ -24,7 +24,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red-Split-Lentils-for-sale" translatesAutoresizingMaskIntoConstraints="NO" id="uUk-bd-4xI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled drawing" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-w6-LsA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Les Lentilz" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-w6-LsA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -47,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Les Lentilz" width="960" height="720"/>
         <image name="Red-Split-Lentils-for-sale" width="533" height="800"/>
-        <image name="Untitled drawing" width="960" height="720"/>
     </resources>
 </document>
