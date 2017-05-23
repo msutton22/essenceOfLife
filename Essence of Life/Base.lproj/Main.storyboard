@@ -609,11 +609,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-FQ-oR8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-FQ-oR8">
                                 <rect key="frame" x="29" y="109" width="318" height="197"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="ZLU-KT-cqh"/>
+                                    <constraint firstAttribute="width" constant="318" id="fSe-Qy-1jZ"/>
+                                </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5j-KO-4lj" customClass="StarControl" customModule="Essence_of_Life" customModuleProvider="target">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5j-KO-4lj" customClass="StarControl" customModule="Essence_of_Life" customModuleProvider="target">
                                 <rect key="frame" x="83" y="519" width="216" height="46"/>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Type of Review Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsa-Je-tox">
@@ -622,8 +626,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chL-VG-Yll">
-                                <rect key="frame" x="141" y="314" width="92" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chL-VG-Yll">
+                                <rect key="frame" x="141" y="318" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
                                 <connections>
                                     <action selector="onTappedLibrary:" destination="5J3-yt-BpR" eventType="touchUpInside" id="pJU-KJ-Bji"/>
@@ -633,7 +638,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nsa-Je-tox" firstAttribute="top" secondItem="cd7-0Q-95S" secondAttribute="bottom" constant="45" id="2bc-cy-k5I"/>
-                            <constraint firstItem="chL-VG-Yll" firstAttribute="centerX" secondItem="pz7-xY-QYO" secondAttribute="centerX" id="3oF-ap-74L"/>
                             <constraint firstItem="cd7-0Q-95S" firstAttribute="top" secondItem="hWt-FQ-oR8" secondAttribute="bottom" constant="56" id="MZI-ft-1pA"/>
                             <constraint firstItem="hWt-FQ-oR8" firstAttribute="centerX" secondItem="pz7-xY-QYO" secondAttribute="centerX" id="RX8-Xb-R3Y"/>
                             <constraint firstItem="i5j-KO-4lj" firstAttribute="top" secondItem="nsa-Je-tox" secondAttribute="bottom" constant="52" id="TQd-HL-Rq9"/>
